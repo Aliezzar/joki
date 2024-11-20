@@ -17,6 +17,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(img/background.png);
     background-position: center;
@@ -47,6 +51,51 @@ img {
     vertical-align: baseline;
 }
 
+/* Navbar */
+.navbar {
+    background-color: #3686ffa8;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 2rem;
+    align-items: center;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.ul-navbar {
+    display: flex;
+}
+
+.ul-navbar .li-navbar {
+    gap: 1rem;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .ul-navbar .li-navbar a {
+    text-decoration: none;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #ffe0cc;
+    /* navbar e taruh di atas e banner ae mon, dadi urut ngunu, dari navbar, sing ngisor dewe footer */
+    padding: 10px;
+    font-weight: 100px;
+    transition: all;
+    transition-duration: 250ms;
+    border-bottom: 1px solid #3686ff(0, 0, 0, 0);
+    display: flex;
+}
+
+.navbar .ul-navbar .li-navbar a:hover {
+    color: #3686ff;
+    border-bottom: 1px solid #3686ff;
+}
+
+/* Navbar End */
+
 /* banner */
 .banner {
     height: 100vh;
@@ -55,15 +104,19 @@ img {
     padding-bottom: 170px;
     position: relative;
     z-index: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner .content {
+    text-align: center;
     padding: 1.4rem 7%;
-    max-width: 80rem;
+    width: 100%;
 }
 
 .banner .content h1 {
-    font-size: 5em;
+    font-size: 6em;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     line-height: 1.2;
@@ -75,12 +128,11 @@ img {
 
 .banner .content p {
     color: white;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-top: 1rem;
     line-height: 1.4;
     font-weight: 100;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-    mix-blend-mode: difference;
 }
 
 .banner .content .cta {
@@ -89,7 +141,7 @@ img {
     padding: 1rem 3rem;
     font-size: 1.4rem;
     color: #fff;
-    background-color: var(--primary);
+    background-color: var(--clr-link);
     border-radius: 0.5rem;
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
@@ -286,48 +338,3 @@ footer {
 }
 
 /* footer end */
-
-/* Navbar */
-.navbar {
-    background-color: #3686ffa8;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem 2rem;
-    align-items: center;
-    height: 80px;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-}
-
-.ul-navbar {
-    display: flex;
-}
-
-.ul-navbar .li-navbar {
-    gap: 1rem;
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar .ul-navbar .li-navbar a {
-    text-decoration: none;
-    font-family: Verdana, Tahoma, sans-serif;
-    color: #ffe0cc;
-    /* navbar e taruh di atas e banner ae mon, dadi urut ngunu, dari navbar, sing ngisor dewe footer */
-    padding: 10px;
-    font-weight: 100px;
-    transition: all;
-    transition-duration: 250ms;
-    border-bottom: 1px solid #3686ff(0, 0, 0, 0);
-    display: flex;
-}
-
-.navbar .ul-navbar .li-navbar a:hover {
-    color: #3686ff;
-    border-bottom: 1px solid #3686ff;
-}
-
-/* Navbar End */
