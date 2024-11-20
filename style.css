@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500;700&display=swap');
+
+/* base */
+:root {
+    --clr-primary: #6dfc56;
+    --clr-secondary: rgb(221, 247, 88);
+    --clr-text: #13390d;
+    --clr-link: rgb(255, 105, 22);
+
+    --white: #fff;
+    --black: 212121;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    min-height: 340vh;
+}
+
+
+h2 {
+    line-height: 1.2;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-link);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: baseline;
+}
+
+/* banner */
+.banner {
+    height: 100vh;
+    background-color: #3586ff;
+    padding-top: 30px;
+    padding-bottom: 170px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner .content {
+    padding: 1.4rem 7%;
+    max-width: 80rem;
+}
+
+.banner .content h1 {
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.banner .content h1 span {
+    color: var(--clr-link);
+}
+
+.banner .content p {
+    color: white;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    mix-blend-mode: difference;
+}
+
+.banner .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* Untuk gelombang tsunami */
+.wave-banner {
+    width: 100%;
+}
+
+.wave-banner .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/wave.png);
+    background-size: 1000px 100px;
+}
+
+.wave-banner .wave.wave1 {
+    animation: animate 30s linear infinite;
+    -webkit-animation: animate 30s linear infinite;
+    z-index: 10;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wave-banner .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    -webkit-animation: animate2 15s linear infinite;
+    z-index: 9;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.wave-banner .wave.wave3 {
+    animation: animate 30s linear infinite;
+    -webkit-animation: animate 30s linear infinite;
+    z-index: 8;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 0;
+}
+
+.wave-banner .wave.wave4 {
+    animation: animate2 5s linear infinite;
+    -webkit-animation: animate2 5s linear infinite;
+    z-index: 7;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+/* Untuk gelombang tsunami */
+/* Banner selesai */
+
+/* about me */
+/* styles.css */
+.about {
+    margin-top: 130px;
+}
+
+.about h1 {
+    text-align: center;
+    margin-bottom: 6rem;
+    font-size: 3rem;
+}
+
+.card-container {
+    justify-content: center;
+    gap: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 500;
+    max-width: 500px;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.card img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    /* Perbesar teks nama */
+    color: #333;
+    margin: 1rem 0;
+}
+
+.card p {
+    font-size: 1rem;
+    /* Perbesar deskripsi */
+    color: #555;
+}
+
+/* about me End*/
+
+/* penjelasan section */
+.penjelasan {
+    padding: 8rem 7% 1.4rem;
+}
+
+.penjelasan h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.penjelasan h2 span {
+    color: var(--primary)
+}
+
+.penjelasan .row {
+    display: flex;
+}
+
+.penjelasan .row .penjelasan-img {
+    flex: 1 1 45rem;
+}
+
+.penjelasan .row .penjelasan-img img {
+    width: 100%;
+}
+
+.penjelasan .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.penjelasan .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.penjelasan .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+/* penjelasan section end*/
+
+/* footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #4c4343;
+    text-align: center;
+}
+
+/* footer end */
+
+/* Navbar */
+.navbar {
+    background-color: #3686ffa8;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 2rem;
+    align-items: center;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.ul-navbar {
+    display: flex;
+}
+
+.ul-navbar .li-navbar {
+    gap: 1rem;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .ul-navbar .li-navbar a {
+    text-decoration: none;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #ffe0cc;
+    /* navbar e taruh di atas e banner ae mon, dadi urut ngunu, dari navbar, sing ngisor dewe footer */
+    padding: 10px;
+    font-weight: 100px;
+    transition: all;
+    transition-duration: 250ms;
+    border-bottom: 1px solid #3686ff(0, 0, 0, 0);
+    display: flex;
+}
+
+.navbar .ul-navbar .li-navbar a:hover {
+    color: #3686ff;
+    border-bottom: 1px solid #3686ff;
+}
+
+/* Navbar End */
